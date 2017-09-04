@@ -1,4 +1,4 @@
-var RetiredForagerBee = function() {
+const RetiredForagerBee = function() {	
 	ForagerBee.call(this);
 	this.age = 40;
 	this.job = 'gamble';
@@ -9,11 +9,9 @@ var RetiredForagerBee = function() {
 RetiredForagerBee.prototype = Object.create(ForagerBee.prototype);
 RetiredForagerBee.prototype.constructor = RetiredForagerBee;
 
-RetiredForagerBee.prototype.gamble = treasure => {
-  this.treasureChest.push(treasure);
-};
+RetiredForagerBee.prototype.gamble = RetiredForagerBee.prototype.forage;
 
 RetiredForagerBee.prototype.forage = () => {
-  return 'I am too old, let me play cards instead';
+	return 'I am too old, let me play cards instead';
 };
 
